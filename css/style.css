@@ -4,8 +4,8 @@ body {
 }
 
 ::selection {
-    color: #dc3545;
-    background: #ffc107;
+    color: #C70039;
+    background: #FFC300;
 }
 
 .mCSB_inside > .mCSB_container {
@@ -46,11 +46,11 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
-    color: #dc3545;
+    color: #C70039;
 }
 
 .logo {
-    color: #ffc107;
+    color: #FFC300;
 }
 
 button.btn {
@@ -65,26 +65,26 @@ button.btn-black {
 }
 
 button.btn-black:hover {
-    color: #dc3545
+    color: #C70039
 }
 
 button.btn-text-yellow:hover {
-    color: #ffc107;
+    color: #FFC300;
 }
 
 button.btn-pink {
-    background: #dc3545;
+    background: #C70039;
     color: #000;
 }
 
 button.btn-yellow {
-    background: #ffc107;
+    background: #FFC300;
     color: #000;
 }
 
 button.btn-yellow:hover {
     background: #000;
-    color: #ffc107;
+    color: #FFC300;
 }
 
 article {
@@ -115,7 +115,7 @@ article section {
 /* intro section */
 
 #intro {
-    background: #ffc107;
+    background: #FFC300;
     position: relative;
     text-align: center;
 }
@@ -166,15 +166,16 @@ article section {
   
 /* web section */
 #web {
-    background: #dc3545;
+    background: #C70039;
     position: relative;
+    color: #fff;
 }
 
 #web:after {
     content: ' ';
     width: 100%;
     height: 150px;
-    background: #dc3545;
+    background: #C70039;
     position: absolute;
     top: -55px;
     left: 0;
@@ -206,7 +207,7 @@ article section {
     left: calc(50% - 60px);
     width: 120px;
     height: calc(100% + 50px);
-    background: #ffc107;
+    background: #FFC300;
     transform: skewX(-33deg);
 }
 
@@ -214,7 +215,7 @@ article section {
     width: 80px;
     height: 150px;
     /* border-radius: 750px; */
-    background: #ffc107;
+    background: #FFC300;
     position: absolute;
     top: calc(50% - 75px);
     left: calc(50% - 40px);
@@ -237,7 +238,7 @@ article section {
 }
 
 .slider-circle li.active {
-    background: #ffc107;
+    background: #FFC300;
 }
 
 .slider-circle li:first-child {
@@ -260,15 +261,16 @@ article section {
 }
 
 #app {
-    background: #9f17b8;
+    background: #581845;
     position: relative;
+    color: #fff;
 }
 
 #app:before {
     content: ' ';
     width: 100%;
     height: 150px;
-    background: #9f17b8;
+    background: #581845;
     position: absolute;
     top: -55px;
     left: 0;
@@ -285,7 +287,7 @@ article section {
     content: ' ';
     width: 200px;
     height: 400px;
-    background: #ffc107;
+    background: #FFC300;
     position: absolute;
     top: -50px;
     left: calc(50% - 100px);
@@ -312,7 +314,7 @@ article section {
     position: absolute;
     margin-right: 0;
     margin-top: 15px;
-    color: #ffc107;
+    color: #FFC300;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.9);
 }
 
@@ -323,15 +325,16 @@ article section {
 }
 
 #mobile {
-    background: #189c9c;
+    background: #FF5733;
     position: relative;
+    color: #fff;
 }
 
 #mobile:after {
     content: ' ';
     width: 100%;
     height: 150px;
-    background: #189c9c;
+    background: #FF5733;
     position: absolute;
     top: -55px;
     left: 0;
@@ -349,7 +352,7 @@ article section {
     content: ' ';
     width: calc(100% + 40px);
     height: 300px;
-    background: #ffc107;
+    background: #FFC300;
     position: absolute;
     bottom: -100px;
     left: -20px;
@@ -374,7 +377,7 @@ article section {
 }
 
 .photo-grid-3 li {
-    color: #ffc107;
+    color: #FFC300;
     list-style: none;
     margin-left: 10px;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.9);
@@ -398,7 +401,7 @@ article section {
 }
 
 #contact h2 {
-    color: #ffc107;
+    color: #FFC300;
 }
 
 #contact input,
