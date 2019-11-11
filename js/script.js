@@ -4,17 +4,18 @@ $(document).ready(function() {
         "web" : $("#web").offset().top - 200,
         "app" : $("#app").offset().top - 200,
         "mobile" : $("#mobile").offset().top - 200,
-        "contact" : $("#contact").offset().top - 200
+        "contact" : $("#contact").offset().top - 100
     }
 
     function activeNav(para) {
         $('nav li').removeClass("active");
         $(`#nav-${para}`).addClass("active");
+        $(".nav-index").html(para);
     }
 
     function loadDiv(para) {
         if(para < offset["web"]) {
-            return activeNav("krypton");
+            return activeNav("intro");
         } else if(para > offset["web"] && para < offset["app"]) {
             return activeNav("web");
         } else if(para > offset["app"] && para < offset["mobile"]) {

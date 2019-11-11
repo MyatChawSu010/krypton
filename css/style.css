@@ -31,6 +31,10 @@ nav {
     background: rgba(0,0,0,0.9);
 }
 
+.nav-index {
+    text-transform: capitalize;
+}
+
 nav ul {
     margin-bottom: 0;
     padding-left: 0;
@@ -120,6 +124,12 @@ article section {
     height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+    article section {
+        padding-bottom: 100px;
+    }
+}
+
 #web section,
 #app section,
 #mobile section,
@@ -127,6 +137,12 @@ article section {
     align-items: flex-start;
     position: relative;
     z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+    #contact section {
+        padding-bottom: 0;
+    }
 }
 
 .row {
