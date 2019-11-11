@@ -27,14 +27,34 @@ $(document).ready(function() {
         }
     }
 
-    $("body").mCustomScrollbar({
-        theme:"minimal",
-        callbacks:{
-            onScroll:function(){
-                loadDiv(Math.abs(this.mcs.top));
-            }
+    function isTouch() {
+        return "ontouchstart" in window;
+    }
+
+    function hashLoader() {
+        if(window.innerWidth > 767 && !isTouch()) {
+            $("body").mCustomScrollbar("scrollTo", $('body').find('.mCSB_container').find(window.location.hash));
+        } else {
+            $('html, body').animate({
+                scrollTop: $(window.location.hash).offset().top
+            }, 1000);
         }
-    });
+    }
+
+    if(window.innerWidth > 767 && !isTouch()) {
+        $("body").mCustomScrollbar({
+            theme:"minimal",
+            callbacks:{
+                onScroll:function(){
+                    loadDiv(Math.abs(this.mcs.top));
+                }
+            }
+        });
+    } else {
+        $(document).scroll(function() {
+            loadDiv($(this).scrollTop());
+        })
+    }
     
     if(window.innerWidth < 768) {
         $(".form-box").mCustomScrollbar({
@@ -43,10 +63,31 @@ $(document).ready(function() {
     }
 
     $("#mouse").click(function() {
-        $("body").mCustomScrollbar("scrollTo", $('body').find('.mCSB_container').find('#web'));
+        if(window.innerWidth > 767 && !isTouch()) {
+            $("body").mCustomScrollbar("scrollTo", $('body').find('.mCSB_container').find('#web'));
+        } else {
+            $('html, body').animate({
+                scrollTop: $('#web').offset().top
+            }, 1000);
+        }
     });
 
-    $("nav li").click(function() {
-        $("body").mCustomScrollbar("scrollTo", $('body').find('.mCSB_container').find(`#${$(this).attr("mcs-target")}`));
+    $(".mcs-target").click(function() {
+        if(window.innerWidth > 767 && !isTouch()) {
+            $("body").mCustomScrollbar("scrollTo", $('body').find('.mCSB_container').find(`#${$(this).attr("mcs-target")}`));
+        } else {
+            $('html, body').animate({
+                scrollTop: $(`#${$(this).attr("mcs-target")}`).offset().top
+            }, 1000);
+        }
+    });
+
+    window.addEventListener('hashchange', function(event) {
+        event.preventDefault();
+        hashLoader();
     })
+
+    if(window.location.hash !== "") {
+        hashLoader();
+    }
 })
