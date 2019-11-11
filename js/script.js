@@ -90,4 +90,27 @@ $(document).ready(function() {
     if(window.location.hash !== "") {
         hashLoader();
     }
+
+    // type me 
+    let type = document.querySelectorAll(".type-me");
+
+    function typeTxt(param, node) {
+        let txt = param;
+        let txtLength = param.length;
+        setTimeout(function() {
+            if(node.innerHTML.length !== txtLength) {
+                node.innerHTML = node.innerHTML + txt[node.innerHTML.length];
+                typeTxt(txt, node);
+            } else {
+                node.classList.add('type-done')
+            }
+        }, 100);
+    }
+
+    for(let i=0; i<type.length; i++) {
+        let txt = type[i].innerHTML;
+        type[i].innerHTML = "";
+        typeTxt(txt, type[i]);
+    }
+    
 })
