@@ -406,7 +406,7 @@ article section {
 #contact textarea {
     display: block;
     width: 100%;
-    background: transparent;
+    background: transparent!important;
     border: none;
     border-bottom: 1px solid #fff;
     color: #fff;
@@ -427,7 +427,7 @@ article section {
 }
 
 footer {
-    background: #000;
+    background: #141414;
     color: #fff;
     padding: 15px;
 }
