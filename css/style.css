@@ -8,6 +8,10 @@ body {
     background: #FFC300;
 }
 
+.mCSB_scrollTools {
+    z-index: 99;
+}
+
 .mCSB_inside > .mCSB_container {
     margin-right: 0;
 }
@@ -39,6 +43,23 @@ nav li {
     list-style: none;
 }
 
+nav li.active {
+    position: relative;
+}
+
+nav li.active a {
+    color: #FFC300;
+}
+
+nav li.active::before {
+    content: ' ';
+    border: 5px solid transparent;
+    border-top-color: #FFC300;
+    position: absolute;
+    top: -4px;
+    left: calc(50% - 2.5px);
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -46,7 +67,7 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
-    color: #C70039;
+    color: #FFC300;
 }
 
 .logo {
@@ -436,6 +457,13 @@ input:-webkit-autofill:focus {
 #contact textarea:focus {
     outline: none;
     border-bottom: 1px solid #65a728;
+}
+
+@media screen and (max-width: 767px) {
+    #contact .form-box {
+        max-height: 60vh;
+        overflow: auto;
+    }
 }
 
 footer {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Krypton Code Lab</title>
+    <meta property="og:image" content="https://kryp70n.github.io/krypton/media/krypton.PNG" />
     <link rel="stylesheet" href="./plugins/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -19,17 +20,17 @@
     <header>
         <nav>
             <ul class="container">
-                <li class="logo"><strong>&lt;/&gt;</strong> Krypton</li>
-                <li><a href="#">Web</a></li>
-                <li><a href="#">Application</a></li>
-                <li><a href="#">Mobile Service</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li id="nav-krypton" class="logo active" mcs-target="intro"><strong>&lt;/&gt;</strong> Krypton</li>
+                <li id="nav-web" mcs-target="web"><a href="#">Web</a></li>
+                <li id="nav-app" mcs-target="app"><a href="#">Application</a></li>
+                <li id="nav-mobile" mcs-target="mobile"><a href="#">Mobile App</a></li>
+                <li id="nav-contact" mcs-target="contact"><a href="#">Contact Me</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <article id="intro">
-            <section id="container-fluid">
+            <section class="container">
                 <h1 class="mb-5">Hi, I am Krypton!</h1>
                 <p class="mb-5">
                     I am a professional web developer.<br/>
@@ -64,7 +65,7 @@
                             <button class="btn btn-black btn-text-yellow mr-3">View Package</button>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-none d-md-block">
                         <div class="slider-circle">
                             <div class="strike"></div>
                             <div class="box" style="background: url(./media/html-css.jpg) no-repeat center / cover;">
@@ -84,14 +85,14 @@
         <article id="app">
             <section class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-none d-md-block">
                         <div class="photo-grid-2">
                             <img src="./media/pexels-photo-1036808.jpeg" alt="">
                             <img src="./media/abstract-business-code-coder-270348.jpg" alt="">
                             <ul class="indicator">
-                                <li>Next</li>
-                                <li>/</li>
                                 <li>Previous</li>
+                                <li>/</li>
+                                <li>Next</li>
                             </ul>
                         </div>
                     </div>
@@ -120,7 +121,7 @@
                             <button class="btn btn-black btn-text-yellow mr-3">Contact Me</button>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-none d-md-block">
                         <div class="photo-grid-3">
                             <img src="./media/silver-iphone-6-50684.jpg" alt="">
                             <img src="./media/abstract-business-code-coder-270348.jpg" alt="">
@@ -140,7 +141,7 @@
                     <div class="col-md-6">
                         <h2 class="mb-5">Contact Me</h2>
                         <p class="mb-5">If you want to know somethings.<br/>Please feel free to contact me anythime.</p>
-                        <form action="#">
+                        <form action="#" class="form-box">
                             <div class="from-group mb-3">
                                 <label for="name">Name</label>
                                 <input type="text" id="name">
@@ -169,7 +170,7 @@
                             <button class="btn btn-yellow">Send</button>
                         </form>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-none d-md-block">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.36701331178!2d96.09558821469614!3d16.907178888368136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195da580a16b5%3A0x2a95bafd2f01a138!2sPhawkan%20Bus%20Stop!5e0!3m2!1sen!2smm!4v1573467141426!5m2!1sen!2smm" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
