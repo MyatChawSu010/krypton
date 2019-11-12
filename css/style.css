@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
@@ -155,6 +157,9 @@ article section {
 }
 
 @media screen and (max-width: 767px) {
+    nav {
+      background: rgba(0, 0, 0, 1);
+    }
     article section {
         padding-bottom: 100px;
     }
@@ -204,6 +209,11 @@ article section {
     position: relative;
 }
 
+@media screen and (max-width: 375px) {
+  #intro h1 {
+    font-size: 2rem;
+  }
+}
 
 /* mouse animation */
 #mouse {
@@ -216,21 +226,21 @@ article section {
 #mouse circle {
     animation: scroll 1.5s ease infinite;
 }
-  
+
 @keyframes scroll {
-    0% { 
+    0% {
         opacity: 0;
         cy: 481;
     }
     33% {
         opacity: 1;
     }
-    100% { 
+    100% {
         opacity: 0;
         cy: 231;
     }
 }
-  
+
 /* web section */
 #web {
     background: #C70039;
@@ -507,7 +517,7 @@ input:-webkit-autofill:focus {
 
 @media screen and (max-width: 767px) {
     #contact .form-box {
-        max-height: 60vh;
+        max-height: 50vh;
         overflow: auto;
     }
 }
